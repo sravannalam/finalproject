@@ -1,0 +1,29 @@
+#particles-js{
+	height: 100px;
+	z-index: 0 !important;
+
+	background-color: orangered;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	color:white;
+	padding: 20px;
+ }
+
+ .particles-js-canvas-el
+ {
+	 position: absolute;
+	 height:250px !important;
+ 
+}
+
+
+ .heading{
+	 color:white;
+	 background-color:rgba(0, 0, 0, 0.931);
+	 padding:20px
+ }
+
+ main{
+	 padding:1em;
+ }

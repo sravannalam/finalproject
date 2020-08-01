@@ -1,0 +1,120 @@
+.nav {
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
+}
+
+.nav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 19px;
+}
+.nav .nav-right {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 19px;
+}
+.nav a:hover {
+  background-color: orangered;
+  color: white;
+
+}
+
+.nav a.active {
+  background-color: orangered;
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.item{
+  flex:1;
+  padding:10px;
+}
+
+p,li{
+  text-align:justify;
+  font-size: 18px;
+  padding:5px;
+}
+
+.margin-left{
+  border-left:1px solid grey;
+}
+.margin-right{
+  border-right:1px solid grey;
+}
+.margin-white{
+  border-left:1px solid white;
+}
+.footer{
+  background-color:black;
+}
+
+.footer>.flex-container
+{
+  padding:20px;
+}
+.footer>.flex-container>.item
+{
+  color:white;
+}
+
+
+
+
+
+.table th{
+  padding:15px;
+  font-size: 16px;
+  background-color: black;
+  color:white;
+}
+
+.table td{
+  padding:15px;
+  font-size: 16px;
+  border: 1px solid black;
+}
+
+input[type=text], input[type=number],input[type=date], select, textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] ,input[type=button] {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius:20px
+}
+
+input[type=submit]:hover {
+  background-color: black;
+  border-radius:20px
+}
+
+.footer-end{
+  background-color:black;
+  color:white;
+  padding: 20px;
+  text-align: center;
+}

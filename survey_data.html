@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Survey Data</title>
+<style>
+ 
+    td {
+        padding:10px;
+        font-size:18px;   
+    }
+</style>
+
+<script type="text/javascript">
+//<![CDATA[
+var decode = function ( text ) {
+    text = text.replace(/\+/g, " ");
+    text = text.replace(/%[a-fA-F0-9]{2}/g, 
+        function ( text ) {
+            return String.fromCharCode( "0x" + text.substr(1,2));
+        }
+    );
+    return text;
+}
+    
+var display_data = function () {
+    alert('-'+location.search+'-');
+    var query = location.search.replace("?", "");
+    if ( query == "" ) return;
+    
+    var fields = query.split("&");
+    
+    if ( fields.length == 0 ) {
+        document.write("<p>No data was submitted.</p>");
+    } else {
+        document.write("<table>");
+        var field_parts;
+        let table="";
+        for ( var i in fields ) {
+            field_parts = fields[i].split("=");
+            field_parts[0] = decode( field_parts[0] );
+            field_parts[1] = decode( field_parts[1] );
+            document.write("<tr><td>" + field_parts[0] + "</td>");
+            document.write("<td>" + field_parts[1] + "</td></tr>");
+            table=table+"<tr><td>"+ field_parts[0]+"</td><td>"+field_parts[1]+"</td></tr>";
+        }
+        
+        document.write("</table>");
+    }
+}
+//]]>
+</script>
+<title>AUM | Survey Data</title>
+<link rel="stylesheet" media="screen" href="./assets/css/particle.css">
+  <link rel="stylesheet" media="screen" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<!-- count particles -->
+<!-- particles.js container -->
+<div id="particles-js">
+    <img src="assets/images/logo-3.svg" height="100" ><br><br>
+    <h1>Auburn University at Montgomery<h1><br>
+</div>
+<hr></hr>
+<center>
+    <div class="heading">
+    <h2>Computer Science / Home</h2>
+    </div>
+</center>
+
+<hr></hr>
+<header>
+    <nav class="nav">
+        <a sclass="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="aboutscience.html" >Program Description</a>
+        <a class="nav-link"  href="technicalassistance.html" >Teaching Assistance</a>
+        <a class="nav-link"   href="calculate.html">Calculate GPA</a>
+        <a  class="nav-link "   href="faculty.html">Faculty</a>
+        <a  class="nav-link "   href="contactus.html">Contact us</a>
+   
+        <a  class="nav-right "   href="#"><input type="text" style="width:100px;height:7px;margin:0px;" placeholder="Search"></a>
+        <a  class="nav-right "   href="#"><i class="fa fa-facebook"></i></a>
+
+        <a  class="nav-right "   href="#"><i class="fa fa-google"></i></a>
+
+        <a  class="nav-right "   href="#"><i class="fa fa-twitter"></i></a>
+
+       
+    </nav>
+</header>    <main>
+
+        <div class="flex-container">
+            <div class="item"></div>
+            <div class="item">
+
+                <div style="border:2px solid blue;padding:10px">
+                    <h1>Survey Data</h1>
+                    <script>display_data();</script>
+                </div>
+</div>
+<div class="item"></div>
+</div>
+</main>
+
+
+<div class="footer-end">
+    Copyright 2015 Sravan. All rights reserved.
+</div>
+
+
+
+</body>
+</html>
